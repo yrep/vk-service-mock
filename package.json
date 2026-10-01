@@ -1,0 +1,22 @@
+{
+  "name": "vk-service-mock",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.22.0",
+  "description": "Mock of our VK message service: generates incoming VK hooks, accepts outgoing messages, keeps its own accounts/chats/messages in SQLite.",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/index.js",
+    "smoke": "node --disable-warning=ExperimentalWarning scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.6",
+    "hono": "^4.10.4",
+    "yaml": "^2.8.1"
+  }
+}
